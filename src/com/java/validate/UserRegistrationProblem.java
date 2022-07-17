@@ -53,6 +53,16 @@ not work this logic
         else
             return false;
     }*/
+    public boolean isValidEmailIds(String emailId){
+        if (isValidInput(EMAIL_REGEX, emailId))
+            return true;
+        else
+            return false;
+    }
+
+    private boolean isValidInput(String regex, String name) {
+        return Pattern.matches(regex, name);
+    }
 
 
 }
