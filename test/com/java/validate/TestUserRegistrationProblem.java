@@ -32,4 +32,9 @@ public class TestUserRegistrationProblem {
     public void givenMobileNumber_WhenProper_ShouldReturnTrue() {
         Assert.assertEquals(true, valid.isValidMobileNumber("91 9876543210"));
     }
+
+    @Test
+    public void givenPassword_WhenProper_ShouldReturnTrue() {
+        Assert.assertEquals(true, valid.isValidPassword("abc123AB"));
+    }
 }
