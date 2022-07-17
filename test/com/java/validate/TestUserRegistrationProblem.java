@@ -22,4 +22,9 @@ public class TestUserRegistrationProblem {
         boolean result = valid.isValidLastName("Yerne");
         Assert.assertTrue(result);
     }
+
+    @Test
+    public void givenEmailId_whenProper_ShouldReturnTrue() {
+        Assert.assertEquals(true, valid.isValidEmailId("abc.xyz@bl.co.in"));
+    }
 }
