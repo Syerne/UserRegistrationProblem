@@ -34,7 +34,12 @@ public class TestUserRegistrationProblem {
     }
 
     @Test
-    public void givenPassword_WhenProper_ShouldReturnTrue() {
-        Assert.assertEquals(true, valid.isValidPassword("abc123AB"));
+    public void givenPassword1_WhenProper_ShouldReturnFalse() {
+        Assert.assertEquals(false, valid.isValidPassword("abc123AB"));
+    }
+
+    @Test
+    public void givenPassword2_WhenProper_ShouldReturnTrue() {
+        Assert.assertEquals(true, valid.isValidPassword("Abc123AB"));
     }
 }

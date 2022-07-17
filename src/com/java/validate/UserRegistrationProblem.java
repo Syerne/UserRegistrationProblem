@@ -9,7 +9,7 @@ public class UserRegistrationProblem {
 
     private static final String MOBILE_NUMBER_REGEX = "^[91]{2}[ ][6789]{1}[0-9]{9}$";
 
-    private static final String PASSWORD_REGEX = "[a-zA-z0-9]{8,}";
+    private static final String PASSWORD_REGEX = "^[A-Z]{1}[a-zA-Z0-9]{7,}";
 
     public boolean isValidFirstName(String firstName) {
         Pattern pattern = Pattern.compile(FIRST_NAME_REGEX);
