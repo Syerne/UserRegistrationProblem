@@ -24,7 +24,12 @@ public class TestUserRegistrationProblem {
     }
 
     @Test
-    public void givenEmailId_whenProper_ShouldReturnTrue() {
+    public void givenEmailId_WhenProper_ShouldReturnTrue() {
         Assert.assertEquals(true, valid.isValidEmailId("abc.xyz@bl.co.in"));
+    }
+
+    @Test
+    public void givenMobileNumber_WhenProper_ShouldReturnTrue() {
+        Assert.assertEquals(true, valid.isValidMobileNumber("91 9876543210"));
     }
 }

@@ -7,6 +7,7 @@ public class UserRegistrationProblem {
     private static final String LAST_NAME_REGEX = "[A-Z][a-z]{2,}";
     private static final String EMAIL_REGEX = "^[0-9a-zA-Z]+([.+_*-][0-9a-zA-Z]+)*@([0-9a-zA-Z][-]?)+[.][a-zA-Z]{2,4}([.][a-zA-Z]{2,4})?$";
 
+    private static final String MOBILENUMBER_REGEX = "^[91]{2}[ ][6789]{1}[0-9]{9}$";
     public boolean isValidFirstName(String firstName) {
         Pattern pattern = Pattern.compile(FIRST_NAME_REGEX);
         return pattern.matcher(firstName).matches();
@@ -18,6 +19,11 @@ public class UserRegistrationProblem {
 
     public boolean isValidEmailId(String emailId) {
         boolean result = Pattern.matches(EMAIL_REGEX, emailId);
+        return result;
+    }
+
+    public boolean isValidMobileNumber(String mobileNumber) {
+        boolean result = Pattern.matches(MOBILENUMBER_REGEX, mobileNumber);
         return result;
     }
 }
