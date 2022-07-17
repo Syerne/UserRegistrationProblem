@@ -43,4 +43,9 @@ public class TestUserRegistrationProblem {
         Assert.assertEquals(true, valid.isValidPassword("Abc@23AB"));
     }
 
+    @Test
+    public void validateUserRegistration_thenHappy() {
+        String result = valid.validateUserRegistration("Shubham", "Yerne", "abc@gmail.com", "91 9876543210", "Abc@23ab");
+        Assert.assertEquals("Happy", result);
+    }
 }

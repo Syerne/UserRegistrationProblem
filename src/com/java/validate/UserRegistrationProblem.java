@@ -35,4 +35,24 @@ public class UserRegistrationProblem {
         boolean result = Pattern.matches(PASSWORD_REGEX, password);
         return result;
     }
+
+    public String validateUserRegistration(String firstName, String lastName, String email, String mobileNumber, String password) {
+        if (isValidFirstName(firstName) && isValidLastName(lastName) && isValidEmailId(email) && isValidMobileNumber(mobileNumber) && isValidPassword(password))
+            return "Happy";
+        else
+            return "Sad";
+    }
+    /*public boolean isValidInput(String regex, String userInput){
+        boolean result = Pattern.matches(regex, userInput);
+        return result;
+    }
+not work this logic
+    public boolean validateUserRegistration(String firstName, String lastName, String email, String mobileNumber, String password) {
+        if (isValidInput(FIRST_NAME_REGEX, firstName) && isValidInput(LAST_NAME_REGEX, lastName) && isValidInput(EMAIL_REGEX,email) && isValidInput(MOBILE_NUMBER_REGEX, mobileNumber) && isValidInput(PASSWORD_REGEX, password))
+            return true;
+        else
+            return false;
+    }*/
+
+
 }
