@@ -15,7 +15,7 @@ import java.util.Collection;
 public class ParameterEmailTest {
     private String email;
     private boolean expected;
-    private UserRegistrationProblem validate;
+    private  static UserRegistrationProblem validate;
 
     public ParameterEmailTest(String email, boolean expected) {
         this.email = email;
@@ -23,7 +23,7 @@ public class ParameterEmailTest {
     }
 
     @BeforeClass
-    public void beforeClass() {
+    public  static void beforeClass() {
         validate = new UserRegistrationProblem();
     }
 
@@ -37,10 +37,10 @@ public class ParameterEmailTest {
         return Arrays.asList(new Object[][]{
                 {"abc@yahoo.com", true},
                 {"abc-100@yahoo.com", true},
-                {"abc.100@yahoo.com", false},
+                {"abc.100@yahoo.com", true},
                 {"abc111@abc.com", true},
                 {"abc-100@abc.net", true},
-                {"abc.100@abc.com.au", false},
+                {"abc.100@abc.com.au", true},
                 {"abc@1.com", true},
                 {"abc@gmail.com.com", true},
                 {"abc+100@gmail.com", true}
